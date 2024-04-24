@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --black: black;
+    --red:red;
+    --white:white;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif;
+    background-color: var(--black);
+    color: white;
+}
+
+@media only screen and (max-width: 1200px) {
+ 
+    }
+
+@media only screen and (max-width: 768px){
+    #navbar{
+        display: block !important;
+        height: 120px !important;
+    }
+    #name {
+        text-align: center;
+        font-size: 4rem !important;
+    }
+   .nav-bar{
+        justify-content: space-around;
+    }
+
+}
+@media only screen and (max-width: 500px){
+    #navbar{
+        display: block !important;
+        height: 100px !important;
+    }
+    #name {
+        text-align: center;
+        font-size: 3rem !important;
+    }
+   .nav-bar{
+        justify-content: space-around;
+    }
+    .background-title1, .background-title2{
+        font-weight: 2rem;
+    }
+}
+
+#navbar{
+    width: 100%;
+    display:flex;
+    height: 4.5rem;
+    align-items: center;
+    background-color: var(--black);
+    justify-content: space-between;
+    position: fixed;
+    z-index: 10;
+}
+
+#name{
+    margin-left: 1%;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 2rem;
+}
+
+.nav-bar{
+    display: flex;
+    text-transform: uppercase;
+    color: var(--white);    
+}
+
+.nav-list-items{
+    list-style-type: none;
+    margin: 0 20px;
+}
+
+.nav-list-items a{
+    color: white;
+    text-decoration: none;
+}
+
+.background-img{
+    width: 100%;
+    height:800px;
+    object-fit: cover;
+}
+
+.background-title1{
+    position: absolute;
+    background-color: blue;
+    padding: 5px;
+    top: 600px;
+    left: 30%;
+    text-align: center;
+    color: white;
+    font-weight: lighter;
+    z-index: 1;
+    text-shadow: 3px 3px black;
+    border-radius: 5px;
+}
+.background-title2
+{
+    position: absolute;
+    background-color: blue;
+    padding: 5px;
+    top: 650px;
+    left: 30%;
+    color: white;
+    font-weight: lighter;
+    z-index: 1;
+    text-shadow: 3px 3px black;
+    border-radius: 5px;
+}
+
+.typewriter{
+    overflow: hidden; 
+    border-right: 7px solid #B7410E; 
+    white-space: nowrap; 
+    margin: 0 auto; 
+    animation: typing 1.5s steps(40, end), blink-caret 1s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 210px;
+    }
+  }
+
+  @keyframes blink-caret {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #B7410E;
+    }
+  }
+
+#projects{
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    padding: 0 10px;
+}
+
+.projects-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 3rem;
+    width: 100%;
+    max-width: 1280px;
+    margin:0 auto;
+    margin-bottom: 6rem;
+}
+
+
+.project-list p{
+    color: var(--white);
+    max-width: 500px;
+    font-size: larger;
+    height: 30px;
+    text-align: center;
+    margin: auto;
+}
+
+.project-img {
+    height: calc(100% - 1rem);
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+.project-tile{
+    color: orange;
+    font-weight: lighter;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+}
+
+#projects h2{
+    color:white;
+    text-align: center;
+    font-size: 50px;
+    height: 80px;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+
+#contact-section{
+    height: 150px;
+}
+
+#contact-section p{
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 50px;
+    text-align: center;
+    margin: 20px;
+}
+.links{
+    display: flex;
+    max-width: 60%;
+    justify-content: space-between;
+    margin: auto;
+}
+.links a{
+    margin: 0 10px;
+    text-align: center;
+}
+
+.fa-brands, .fa-solid {
+    font-size: 30px;
+    color: var(--white);
+}
+#contact-section a{
+    color: white;
+    text-decoration: none;
+}
+
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    height: 60px;
+    align-items: center;
+    border-top: 1px solid var(--white);
+}
+
+footer p{
+    margin-right: 20px;
+}
+
+a{
+    text-decoration: none;
+}
+
+footer a:visited{
+    color: orange;
+}
+    </style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v6.5.1/css/all.css">
+    <title>Anna Bowen Portfolio Webpage</title>
+</head>
+
+<body>
+        <nav id="navbar">
+            <h1 id="name">Anna Bowen</h1>
+            <ul class="nav-bar">
+                <li class="nav-list-items"><a href="#welcome-section">About</a></li>
+                <li class="nav-list-items"><a href="#projects">Work</a></li>
+                <li class="nav-list-items"><a href="#contact-section">Contact</a></li>
+            </ul>
+        </nav>
+        <section id="welcome-section">
+        <div class="background-image">
+            <img
+                src="https://res.cloudinary.com/dxh60x8dq/image/upload/v1710544678/Washington_DC_iabima.jpg" class="background-img">
+            </img>
+            <h1 class="background-title1">
+                Hi! I am Anna
+            </h1>
+            <h2 class="background-title2 typewriter"> 
+                a software engineer
+            </h2>
+        </div>
+    </section>
+    <section id="projects">
+        <h2>My projects</h2>
+        <div class="projects-grid"> 
+                <a href="https://ramen-talk.netlify.app/" target="_blank">
+                    <p class="project-tile">Restaurant Application</p>
+                    <img class="project-img" src="https://res.cloudinary.com/dxh60x8dq/image/upload/v1710544684/restaurant_bm0aza.png"/>
+                </a>
+                <a href="https://bam-weather.netlify.app/" target="_blank">
+                    <p class="project-tile">Weather Application</p>
+                    <img class="project-img" src="https://res.cloudinary.com/dxh60x8dq/image/upload/v1710544676/Project_2_bktwjp.jpg"/>
+                </a>
+                <a href="https://findamatchingpair.netlify.app/" target="_blank">
+                    <p class="project-tile">Matching Game</p>
+                    <img class="project-img" src="https://res.cloudinary.com/dxh60x8dq/image/upload/v1710544677/Project_1_c7kwc2.jpg"/>
+                </a>
+        </div>
+    </section>
+    <section id="contact-section">
+        <p> Contact Me</p>
+        <div class="links">
+        <a href="https://www.linkedin.com/in/realannabowen/" id="profile-link" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+            LinkedIn
+        </a>
+        <a href="https://github.com/BowenAnna" target="_blank">
+            <i class="fa-brands fa-github"></i>
+            GitHub
+        </a>
+        <a href="mailto:anna.bowen16@gmail.com/" target="_blank">
+            <i class="fa-solid fa-at"></i>
+           Email
+        </a>
+    </div>
+    </section>
+    <footer>
+        <p>Designed by <a href="https://www.linkedin.com/in/realannabowen/">Anna Bowen</a></p>
+    </footer>
+</body>
+
+</html>
